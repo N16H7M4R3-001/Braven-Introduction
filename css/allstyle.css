@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+}
+body{
+	background: #131313;
+}
+.social-menu{
+	color: white;
+	margin-top: 250px;
+	text-align: center;
+	justify-content: center;
+}
+.social-menu a{
+	text-decoration: none;
+	color: white;
+}
+.social-menu .fab{
+	padding: 80px;
+}
+.social-menu h1{
+	margin-top: 70px;
+	font-size: 50px;
+}
+.social-menu .fab:hover{
+	color: grey;
+}

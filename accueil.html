@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braven Rp: Accueil</title>
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+</head>
+<body onload="loading()">
+    <div class="loader-circle">
+        <img src="image/BVCOIN.png" alt="">
+    </div>
+    <div class="loader">
+        <div class="progress">
+            <div id="percent">1%</div>
+            <div id="bar">
+                <div id="barc"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-page">
+        <div class="header">
+            <ul>
+                <li class="li">BravenRP</li>
+                <li class="logo"><img src="image/BVCOIN.png" alt=""></li>
+                <li class="li">BravenRP</li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li><a href="topserver.html">Top serveur</a></li>
+                <li><a href="socialmedia.html">Nos réseaux</a></li>
+                <li><a href="whitelist.html">Whitelist Discord</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+                <li><a href="recrutstaff.html">Recrutements Staff</a></li>
+            </ul>
+            <p>Braven Roleplay Serveur</p>
+        </div>
+        <div class="footer">
+            <img src="image/land.png" alt="">
+        </div>
+    </div>
+
+    
+    <script>
+        const load = gsap.timeline({
+    paused: "true"
+})
+load.to("#percent, #bar",{
+    duration: .2,
+    opacity: 0,
+    zIndex: -1
+});
+load.to(".progress",{
+    duration: .8,
+    width: "0%"
+});
+load.to(".loader-circle",{
+    duration: 1.5,
+    top: "50%",
+    left: "80%"
+})
+load.to(".loader-circle img",{
+    duration: .5,
+    width: "300px",
+    height: "300px"
+});
+load.to(".loader",{
+    zIndex: 0
+});
+load.from(".header, .footer",{
+    duration: 1.5,
+    y: "150%",
+    x: "-50%",
+    opacity: 0,
+    stagger: {
+        amount: .4
+    }
+},"-=.5");
+load.from(".content ul li, p",{
+    duration: 1.8,
+    delay: 1,
+    y: 200,
+    skewY: 10,
+    stagger: {
+        amount: .4
+    },
+    opacity: 0,
+    ease: "power4.out"
+    
+},"-=1.5");
+
+var id;
+var width = 1;
+function loading(){
+    id = setInterval(frame,20);
+}
+function frame(){
+    if(width>=100){
+        clearInterval(id);
+        load.play();
+    }
+    else{
+        width++;
+        document.getElementById("barc").style.width = width + "%";
+        document.getElementById("percent").innerHTML = width + "%";
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Braven RP: Top Serveur</title>
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="css/topserv.css">
+
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+      
+      <!-- icons -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+      <!-- gsap -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+      <!-- AnimeJS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+      <!-- JQuery -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+</head>
+<body>
+      
+      <div class="container">
+
+            <div class="loading-screen"></div>
+           
+            <div class="loader">
+                  <div class="ringOne ring">
+                        <img src="image/ring.png">
+                  </div>
+                  <div class="ringTwo ring">
+                        <img src="image/ring.png">
+                  </div>
+            </div>
+      </div>
+
+      </div>
+
+      <div class="header">
+            
+            <h1 class="ml7" id="title">            
+                  <span class="text-wrapper">
+                        <span class="letters">Top Serveur BravenRP</span>
+                  </span>
+            </h1>
+                            
+                            
+            <p id="tagline" class="p1">Afin de soutenir le serveur, votez via la plateforme Top Serveur pour le serveur 
+            BravenRP. Cela aide grandement à la croissance du serveur.</p>
+            
+            <br><br>
+            
+            <p id="tagline" class="p2">N'oubliez pas que c'est grâce à vous que la ville s'agrandit et devient connue !</p>
+            
+            <div class="buttons">
+                  <button id="one"><a href="https://top-serveurs.net/gta/vote/fr-braven-rp-whitelist-ouverte-serious-rp-double-jobs-staff-actif">Voter pour BravenRP</button>
+            </div>
+
+      </div>
+
+
+      <!-- js -->
+      <script> TweenMax.to(".loading-screen", 4, {
+            delay: 0.2,
+            top: "-110%",
+            ease: Expo.easeInOut
+      });
+
+
+      TweenMax.from(".bottom-text", 3, {
+            delay: 6.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+
+      TweenMax.from(".menu", 3, {
+            delay: 7.5,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".p1", 3, {
+            delay: 9.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".p2", 3, {
+            delay: 8.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from("#one", 3, {
+            delay: 8.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from("#two", 3, {
+            delay: 8.7,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+  
+      var t1 = new TimelineMax();
+
+      t1.from(".ringOne", 4, {
+            delay: 0.4,
+            opacity: 0,
+            y:40,
+            ease: Expo.easeInOut
+      }).from(".ringTwo", 4, {
+            delay: 0.9,
+            opacity: 0,
+            y: 40,
+            ease: Expo.easeInOut
+      }, "-=5").to(".ringOne", 4, {
+            delay: 0.4,
+            x: 40,
+            ease: Expo.easeInOut
+      }).to(".ringTwo", 4, {
+            delay: 0.9,
+            x: 40,
+            ease: Expo.easeInOut
+      },"-=5");
+
+var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml7 .letter',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 400,
+    easing: "easeOutExpo",
+    delay: function(el, i) {
+      return 9000 + 50 * i;
+    }
+  });</script>
+</body>
+</html>

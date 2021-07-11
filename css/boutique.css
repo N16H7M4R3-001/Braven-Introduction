@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+
+}
+body{
+    background-color: #1a1a1a;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 200vh;
+    width: 100%;
+    flex-direction: column;
+
+
+}
+.heading{
+    margin-top: 100px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 150px;
+    margin-bottom: 50px;
+
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.section h1{
+    font-size: 12px;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    font-family: 'Oswald', sans-serif;
+    color: wheat;
+    margin-bottom: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.section .box{
+    width: 400px;
+    height: 400px;
+    background-color: #f0f0f0;
+}
+.box1{
+    background: url(https://images.unsplash.com/photo-1550242499-b5171f56de56?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGJsYWNrJTIwYW5kJTIwd2hpdGUlMjBjYXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80) no-repeat 50% 50%;
+}
+.box2{
+    background: url(https://images.unsplash.com/photo-1619760563055-2699bea3755d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2FuZ3N0ZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80) no-repeat 50% 50%;
+}
+.box3{
+    background: url(https://i.pinimg.com/736x/5b/49/46/5b4946205b91fde244bade1bf3469082.jpg) no-repeat 50% 50%;
+}
+.box4{
+    background: url(https://www.rockdesign.com/upload/template/a/y/quick-black-metal-business-card-06-01.jpg) no-repeat 50% 50%;
+}
+.box5{
+    background: url(https://i.pinimg.com/736x/f0/fb/23/f0fb238fc2c9cea81d11ad2dd115f9c2.jpg) no-repeat 50% 50%;
+}
+.box6{
+    background: url(https://i.pinimg.com/originals/79/16/61/79166133a68d5aa76f7b49cff9678b20.jpg) no-repeat 50% 50%;
+}
